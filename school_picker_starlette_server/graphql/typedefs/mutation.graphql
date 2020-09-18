@@ -1,0 +1,8 @@
+type Mutation {
+  obtainTokenPair(input: ObtainTokenPairInput!): TokenPairResponse!
+  refreshToken(refreshToken: String!): AccessTokenResponse!
+  blacklistToken(refreshToken: String!): BlacklistTokenResponse!
+  createUser(input: CreateUserInput!): User!
+  updateUser(input: UpdateUserInput!): User!
+  deleteUser(id: Int!): Boolean!
+}

@@ -1,0 +1,18 @@
+input ObtainTokenPairInput {
+  email: String!
+  password: String!
+}
+
+type TokenPairResponse {
+  access: String!
+  refresh: String!
+}
+
+type AccessTokenResponse {
+  access: String!
+}
+
+type BlacklistTokenResponse {
+  id: Int!
+  jti: String!
+}

@@ -3,3 +3,16 @@ type User {
   email: String!
   hashed_password: String!
 }
+
+input CreateUserInput {
+  email: String!
+  password: String!
+  confirm_password: String!
+}
+
+input UpdateUserInput {
+  id: Int!
+  email: String
+  password: String
+  confirm_password: String
+}
