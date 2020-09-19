@@ -8,11 +8,9 @@ from ....validation import (
     User,
 )
 
-# TODO: #1 Better type annotations for user resolvers
-
 
 @mutation.field("createUser")
-async def resolve_create_user(*_, input):
+async def resolve_create_user(*_, input) -> User:
     data = CreateUserInput(**input)
 
     hashed_password = hasher.hash(data.password)
@@ -28,7 +26,7 @@ async def resolve_create_user(*_, input):
 
 
 @mutation.field("updateUser")
-async def resolve_update_user(*_, input):
+async def resolve_update_user(*_, input) -> User:
     data = UpdateUserInput(**input)
 
     values = {}
